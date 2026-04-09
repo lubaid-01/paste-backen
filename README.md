@@ -139,7 +139,7 @@ Every visitor — whether registered or not — gets a unique `anonId` cookie on
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/paste-app.git
+git clone https://github.com/lubaid-01/paste-backen.git
 cd paste-app
 ```
 
