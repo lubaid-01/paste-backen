@@ -22,8 +22,20 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());   
 app.use(anonUser); 
+
 app.use("/user",user)
 app.use("/paste",paste)
+
+app.get('/health', (req, res) => {
+  res.status(200).json({message : 'Server is healthy'});
+});
+
+app.use((req, res) => {
+  res.status(404).json({
+    error: "Not Found",
+    message: "Please use /health for pings or /users for API tasks"
+  });
+});
 
 
 connectDb();
